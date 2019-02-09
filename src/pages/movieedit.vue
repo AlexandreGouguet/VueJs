@@ -35,7 +35,6 @@
                 <v-textarea box name="input-7-4" label="Synopsis" v-model="movie.synopsys"></v-textarea>
                  <v-layout justify-end>
                     <v-btn offset-md2 v-on:click="save">Sauvegarder</v-btn>
-                    <v-btn color="secondary darken-1" v-on:click="removefilm">Supprimer</v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>

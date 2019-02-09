@@ -27,8 +27,8 @@
             <v-flex md8 mt-5>
                 <p>{{movie.synopsys}}</p>
                  <v-layout justify-end>
-                    <v-btn offset-md2 v-on:click="editfilm">Edit film</v-btn>
-                    <v-btn color="secondary darken-1" v-on:click="removefilm">Remove film</v-btn>
+                    <v-btn offset-md2 v-on:click="editfilm">Editer</v-btn>
+                    <v-btn color="secondary darken-1" v-on:click="removefilm">Supprimer</v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>
@@ -46,6 +46,10 @@ export default {
     methods: {
         editfilm : function(){
             this.$router.push({ path: `/edit/${this.movie.id}` })
+        },
+        removefilm : function(){
+            this.movies.splice(this.movies.findIndex(movie => movie.id === this.movie.id), 1);
+            this.$router.push({ path: `/` });
         }
     },
     computed: {
