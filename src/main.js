@@ -64,8 +64,8 @@ Vue.component('movie-item', MovieItemComponent);
 
 const routes = [
   { path: '/', component: Index },
-  { path: '/show/:id', component: MovieShow },
-  { path: '/edit/:id', component: MovieEdit },
+  { path: '/movie/:id', component: MovieShow },
+  { path: '/movie/:id/edit', component: MovieEdit },
   { path: '/new/', component: MovieNew }
 ]
 

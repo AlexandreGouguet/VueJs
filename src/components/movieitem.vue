@@ -1,7 +1,7 @@
 <template>
     <li class="mb-4">
         <v-card>
-            <v-img height="150px" v-bind:src="movie.imgUrl">
+            <v-img height="250px" v-bind:src="movie.imgUrl">
             </v-img>
             <v-card-title primary-title>
                 <div>
@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         showdetails : function(){
-            this.$router.push({ path: `/show/${this.movie.id}` })
+            this.$router.push({ path: `/movie/${this.movie.id}` })
         }
     }
 }

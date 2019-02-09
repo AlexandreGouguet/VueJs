@@ -45,7 +45,7 @@ export default {
     },
     methods: {
         editfilm : function(){
-            this.$router.push({ path: `/edit/${this.movie.id}` })
+            this.$router.push({ path: `/movie/${this.movie.id}/edit` })
         },
         removefilm : function(){
             this.movies.splice(this.movies.findIndex(movie => movie.id === this.movie.id), 1);

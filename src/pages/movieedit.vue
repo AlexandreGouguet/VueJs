@@ -49,14 +49,8 @@ export default {
         }
     },
     methods: {
-        editfilm : function(){
-            this.$emit('edit',this.movie);
-        },
         save: function() {
             this.$router.push({ path: `/` })
-        },removefilm : function(){
-            this.movies.splice(this.movies.findIndex(movie => movie.id === this.movie.id), 1);
-            this.$router.push({ path: `/edit/${this.movie.id}` });
         }
     },
     computed: {
