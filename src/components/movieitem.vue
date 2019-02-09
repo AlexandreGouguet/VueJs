@@ -5,13 +5,12 @@
             </v-img>
             <v-card-title primary-title>
                 <div>
-                    <div class="headline"><span v-on:click="showdetails">{{ movie.title }}</span></div>
+                    <div class="headline"><span>{{ movie.title }}</span></div>
                     <span class="grey--text">Réalisé en {{movie.year}}</span>
                 </div>
             </v-card-title>
             <v-card-actions>
-                <v-btn v-on:click="editfilm" flat>Edit</v-btn>
-                <v-btn v-on:click="removefilm" flat color="secondary">Remove</v-btn>
+                <v-btn color="secondary darken-1" v-on:click="showdetails" flat>Détails</v-btn>
                 <v-spacer></v-spacer>
                 <v-btn icon @click="show = !show">
                     <v-icon>{{ show ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</v-icon>
@@ -35,13 +34,8 @@ export default {
         }
     },
     methods: {
-        editfilm : function(){
-            this.$router.push({ path: `/edit/${this.movie.id}` })
-        },showdetails : function(){
-            this.detailsdisplay = !detailsdisplay;
-            //this.$router.push({ path: `/show/${this.movie.id}` })
-        },removefilm : function(){
-            this.$emit('remove')
+        showdetails : function(){
+            this.$router.push({ path: `/show/${this.movie.id}` })
         }
     }
 }

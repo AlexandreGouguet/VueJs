@@ -1,11 +1,35 @@
 <template>
-    <p>
-        Title : <input type="text" v-model="movie.title" /><br />
-        Year : <input type="text" v-model="movie.year" /><br />
-        Synopsys : <textarea v-model="movie.synopsys"></textarea><br />
-        <button v-on:click="save">Save</button>
-        <button v-on:click="removefilm">Remove film</button>
-    </p>
+    <div>
+        <v-layout md8 justify-center>
+            <v-flex md8>
+                <v-flex xs12 sm5>
+                    <v-text-field label="Titre" v-model="movie.title"></v-text-field>
+                </v-flex>
+                <v-flex xs3 sm1>
+                    <v-text-field label="Réalisé en" v-model="movie.year"></v-text-field>
+                </v-flex>
+            </v-flex>  
+        </v-layout>
+        <v-layout justify-center>
+            <v-flex md8>
+                <v-img v-bind:src="movie.imgUrl">
+                </v-img>
+                <v-flex xs12>
+                    <v-text-field label="Adresse de l'image" v-model="movie.imgUrl"></v-text-field>
+                </v-flex>
+            </v-flex>
+        </v-layout>
+        <v-layout md8 justify-center>
+            <v-flex md8 mt-4>
+                <v-textarea box name="input-7-4" label="Synopsis" v-model="movie.synopsys"></v-textarea>
+                 <v-layout justify-end>
+                    <v-btn offset-md2 v-on:click="save">Sauvegarder</v-btn>
+                    <v-btn color="secondary darken-1" v-on:click="removefilm">Supprimer</v-btn>
+                </v-layout>
+            </v-flex>
+        </v-layout>
+    </div>
+
 </template>
 <script>
 export default {

@@ -4,6 +4,7 @@ import MovieItemComponent from './components/movieitem.vue'
 import Index from './pages/index.vue'
 import MovieShow from './pages/movieshow.vue'
 import MovieEdit from './pages/movieedit.vue'
+import MovieNew from './pages/movienew.vue'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
@@ -50,7 +51,8 @@ Vue.component('movie-item', MovieItemComponent);
 const routes = [
   { path: '/', component: Index },
   { path: '/show/:id', component: MovieShow },
-  { path: '/edit/:id', component: MovieEdit }
+  { path: '/edit/:id', component: MovieEdit },
+  { path: '/new/', component: MovieNew }
 ]
 
 const router = new VueRouter({

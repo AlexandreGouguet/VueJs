@@ -6,7 +6,8 @@
                 <v-toolbar-title>UberFilm</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-                <v-btn flat>Link One</v-btn>
+                <v-btn v-on:click="accueil" flat>Accueil</v-btn>
+                <v-btn v-on:click="movienew" flat>Créer Film</v-btn>
                 </v-toolbar-items>
             </v-toolbar>
         </v-flex>
@@ -23,12 +24,10 @@ export default {
         }
     },
     methods: {
-        editfilm : function(){
-            this.$router.push({ path: `/edit/${this.movie.id}` })
-        },showdetails : function(){
-            this.$router.push({ path: `/show/${this.movie.id}` })
-        },removefilm : function(){
-            this.$emit('remove')
+        accueil : function(){
+            this.$router.push({ path: `/` })
+        },movienew : function(){
+            this.$router.push({ path: `/new/` })
         }
     }
 }
