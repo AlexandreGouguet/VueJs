@@ -41,7 +41,8 @@ window.movies = [
         name: "Henri Selick",
         nationality: "Américain",
         birthdate: "30/11/1952"
-      }
+      },
+      rating: 0
   },
   {
       id: 1,
@@ -56,7 +57,8 @@ window.movies = [
         name: "Christopher Nolan",
         nationality: "Britanno-Américain",
         birthdate: "30/07/1970"
-      }
+      },
+      rating: 0
   }
 ]
 

@@ -9,6 +9,12 @@
                 <v-flex xs3 sm1>
                     <v-text-field label="Réalisé en" v-model="movie.year"></v-text-field>
                 </v-flex>
+                <v-flex xs6 sm4>
+                    <v-text-field label="Genre" v-model="movie.type"></v-text-field>
+                </v-flex>
+                <v-flex xs5 sm2>
+                    <v-text-field label="Langue disponible" v-model="movie.language"></v-text-field>
+                </v-flex>
                 <v-flex xs10 sm4>
                     <h2>Réalisateur</h2>
                     <v-text-field label="Réalisateur" v-model="movie.realisator.name"></v-text-field>

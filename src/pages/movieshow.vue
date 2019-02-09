@@ -1,9 +1,10 @@
 <template>
     <div>
-        <v-layout md8 justify-center>
+        <v-layout md8 mt-3 justify-center>
             <v-flex md8>
-                <h1>{{ movie.title }}</h1>
+                <h1>{{ movie.title }} ({{movie.type}})</h1>
                 <p>Réalisé en {{movie.year}}</p>
+                <p>Langue disponible : {{movie.language}}</p>
                 <v-expansion-panel md8>
                     <v-expansion-panel-content>
                         <div slot="header">Par {{movie.realisator.name}}</div>
@@ -24,7 +25,8 @@
             </v-flex>
         </v-layout>
         <v-layout md8 justify-center>
-            <v-flex md8 mt-5>
+            <v-flex md8 mt-3>
+                <v-rating v-model="movie.rating"></v-rating>
                 <p>{{movie.synopsys}}</p>
                  <v-layout justify-end>
                     <v-btn offset-md2 v-on:click="editfilm">Editer</v-btn>
