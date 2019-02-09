@@ -1,12 +1,23 @@
 <template>
     <div>
         <v-layout md8 justify-center>
-            <v-flex md8>
+            <v-flex md8 mt-3>
+                <h1>Edition film</h1>
                 <v-flex xs12 sm5>
                     <v-text-field label="Titre" v-model="movie.title"></v-text-field>
                 </v-flex>
                 <v-flex xs3 sm1>
                     <v-text-field label="Réalisé en" v-model="movie.year"></v-text-field>
+                </v-flex>
+                <v-flex xs10 sm4>
+                    <h2>Réalisateur</h2>
+                    <v-text-field label="Réalisateur" v-model="movie.realisator.name"></v-text-field>
+                </v-flex>
+                <v-flex xs5 sm2>
+                    <v-text-field label="Né(e) le" v-model="movie.realisator.birthdate"></v-text-field>
+                </v-flex>
+                <v-flex xs10 sm4>
+                    <v-text-field label="Nationalité" v-model="movie.realisator.nationality"></v-text-field>
                 </v-flex>
             </v-flex>  
         </v-layout>

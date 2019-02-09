@@ -6,7 +6,7 @@
             <v-card-title primary-title>
                 <div>
                     <div class="headline"><span>{{ movie.title }}</span></div>
-                    <span class="grey--text">Réalisé en {{movie.year}}</span>
+                    <span class="grey--text">Réalisé en {{movie.year}} par {{movie.realisator.name}}</span>
                 </div>
             </v-card-title>
             <v-card-actions>
