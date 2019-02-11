@@ -13,13 +13,13 @@ import 'vuetify/dist/vuetify.min.css'
 Vue.use(Vuetify, {
   theme: {
     primary: {
-      base: '#3D013C',
-      lighten1: '#60487F',
+      base: '#02547D',
+      lighten1: '#0285A8',
       lighten2: '#7888BF'
     },
     secondary: {
-      base: '#4AF8FF',
-      darken1: '#68C2E5'
+      base: '#008C72',
+      darken1: '#02BEC4'
     },
     accent: '#8c9eff',
     error: '#b71c1c'

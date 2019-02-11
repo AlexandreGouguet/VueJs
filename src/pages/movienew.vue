@@ -64,8 +64,9 @@ export default {
     methods: {
         newmovie: function() {
             this.movie_to_add.id = this.movies.length;
-            this.movies.push(this.movie_to_add)
-            this.movie_to_add = {}
+            this.movies.push(this.movie_to_add);
+            this.movie_to_add = {};
+            this.$router.push({ path: `/` });
         }
     },
 }

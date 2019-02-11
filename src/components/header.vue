@@ -2,7 +2,7 @@
     <header>
     <v-layout justify-center>
         <v-flex md8>
-            <v-toolbar class="primary" dark>
+            <v-toolbar height="80px" class="primary" dark>
                 <v-toolbar-title>UberFilm</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
